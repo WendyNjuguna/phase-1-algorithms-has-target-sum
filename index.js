@@ -1,17 +1,29 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const display = {};
+  for (const number of array){
+    const complement = target - number;
+    //if any number in the array is the number listed in index.js to be true then return true
+    if (complement in display) return true;
+    display[number] = true;
+}
+//if not, display false
+return false;
+
 }
 
+
 /* 
-  Write the Big O time complexity of your function here
+Time complexity
+ 0(n^2)
 */
 
 /* 
-  Add your pseudocode here
+pseudocode.
+
 */
 
 /*
-  Add written explanation of your solution here
+It has the 0(n^2) because it has one For Loop
 */
 
 // You can run `node index.js` to view these console logs
